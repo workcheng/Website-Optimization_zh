@@ -55,3 +55,9 @@
 
 * <a href="http://getbootstrap.com/css/">Bootstrap CSS</a>
 * <a href="http://getbootstrap.com/components/">Bootstrap组件</a>
+
+### 优化概述
+ - 通过把代码推到github，利用github pages可以外网访问到，通过PageSpeed Insights访问本项目的github pages首页，看到了跑分只有30多，
+ 根据PageSpeed Insights上的建议，优化css外部加载损失性能的问题，利用js的异步加载Google fonts的css文件以优化页面访问速度。压缩了2M多的图片。
+ - 对main.js的函数优化。利用performance看到让页面小于60fps的问题代码的位置，看到循环里面重复获取一个固定值,把这个值移到外面解决问题。
+ - 优化了pizza展示的数量。拖动滑块控制pizza的大小函数优化，直接获取pizza宽度的百分比赋值
