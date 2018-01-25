@@ -453,23 +453,11 @@ var resizePizzas = function(size) {
     //   var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
     //   document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
     // }
-      //获取页面宽度
-      // var windowWidth = document.querySelector("#randomPizzas").offsetWidth;
-      //获得滑块的值
-      // var value = document.querySelector("#sizeSlider").value;
-      // console.info(document.querySelector("#pizzaSize"))
       //计算实际pizza宽度
       var determineD2 = determineDx(size);
-      // console.info("value",value)
-      // console.info("size",size)
       // var newwidth = windowWidth*determineD2+'px';
       var newwidth = 100*determineD2+'%';
-      // console.info("newwidth",newwidth);
-      // console.info("determineD2",determineD2);
-      // console.info("windowWidth",windowWidth);
       //对所有pizza宽度进行赋值
-      // console.info(document.querySelectorAll(".randomPizzaContainer div")[0].style.width=newwidth);
-      // document.querySelectorAll(".randomPizzaContainer div");
       var nodeList = document.querySelectorAll(".randomPizzaContainer div");
       for (var i = 0; i < nodeList.length; i++) {
           nodeList[i].style.width = newwidth;
